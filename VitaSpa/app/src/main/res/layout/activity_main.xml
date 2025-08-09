@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondospa"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="208dp"
+
+            app:srcCompat="@drawable/spa" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefono: 987654321"
+            android:textColor="#454545"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook: @vitaspa"
+            android:textColor="#454545"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direccion: Av. Calle sin Rumbo "
+            android:textColor="#454545"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#34DC7C"
+            android:text="Continuar"
+            android:layout_marginTop="20dp"
+            app:icon="@drawable/arrow_right_alt_24"
+            app:iconGravity="textEnd"
+             />
+
+        <Button
+            android:id="@+id/btn_cerrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B474E5"
+            android:text="Cerrar"
+            app:icon="@drawable/close_24"
+            app:iconGravity="textStart"
+             />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

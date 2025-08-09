@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondospa2"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@drawable/usericon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp" />
+    <TextView
+        android:id="@+id/tvLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvLogo"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="text"
+                android:hint="Ingresa usuario" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/clave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usuario"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="15dp">
+            <EditText
+                android:id="@+id/etClave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="textPassword"
+                android:hint="ingrese contraseña" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clave"
+            android:layout_marginTop="25dp"
+            android:text="Ingresar"
+            android:backgroundTint="#34DC7C"
+            />
+        <Button
+            android:id="@+id/btnWeb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnIngresar"
+            android:text="Regresar"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#B474E5" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
