@@ -14,12 +14,13 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="20dp"
-        >
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="200dp"
-            android:layout_height="208dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
 
             app:srcCompat="@drawable/spa" />
 
@@ -27,9 +28,9 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:text="Telefono: 987654321"
             android:textColor="#454545"
-            android:layout_marginTop="20dp"
             android:textSize="16sp"
             android:textStyle="bold" />
 
@@ -57,12 +58,11 @@
             android:id="@+id/btn_continuar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:backgroundTint="#34DC7C"
             android:text="Continuar"
-            android:layout_marginTop="20dp"
             app:icon="@drawable/arrow_right_alt_24"
-            app:iconGravity="textEnd"
-             />
+            app:iconGravity="textEnd" />
 
         <Button
             android:id="@+id/btn_cerrar"
@@ -71,8 +71,7 @@
             android:backgroundTint="#B474E5"
             android:text="Cerrar"
             app:icon="@drawable/close_24"
-            app:iconGravity="textStart"
-             />
+            app:iconGravity="textStart" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
