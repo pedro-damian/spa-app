@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:icon="@drawable/home_24"
+        android:title="Home"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/location_on_24"
+        android:title="Mapa"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/group_24"
+        android:title="Quienes Somos" />
+    <item
+        android:icon="@drawable/gps_fixed_24"
+        android:title="Mision" />
+    <item
+        android:icon="@drawable/objects_24"
+        android:title="Vision" />
+    <item
+        android:icon="@drawable/power_settings_new_24"
+        android:title="Cerrar Sesion"
+        app:showAsAction="always" />
+    <item
+        android:icon="@drawable/spa_24"
+        android:title="Servicios"
+        app:showAsAction="always" />
+</menu>
