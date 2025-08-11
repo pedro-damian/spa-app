@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VitaSpa</string>
+    <string name="title_activity_mapa_api">MapaApi</string>
 </resources>

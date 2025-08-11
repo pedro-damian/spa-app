@@ -13,6 +13,11 @@ class Mapa : AppCompatActivity() {
         setContentView(R.layout.activity_mapa)
     }
 
+    override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
     // este metodo evalua que accion va tomar cuando se selecciona un item del menu opciones y esto lo hace mediante el ID del elemento seleccionado
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
@@ -29,7 +34,7 @@ class Mapa : AppCompatActivity() {
 
     // estas funciones nos permiten navegar de la pantalla actual hacia los diferentes pantallas de la aplicacion
     fun home() {
-        val pantalla1 = Intent(this, Menu::class.java)
+        val pantalla1 = Intent(this, com.example.vitaspa.Menu::class.java)
         startActivity(pantalla1)
         System.exit(0)
     }

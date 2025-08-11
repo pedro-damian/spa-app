@@ -29,12 +29,8 @@ class Mision : AppCompatActivity() {
         System.exit(0)
     }
     fun mapa() {
-        val pantalla3 = Intent(this, Mapa::class.java)
+        val pantalla3 = Intent(this, MapaApi::class.java)
         startActivity(pantalla3)
-        val gmmIntentUri = Uri.parse("geo:0,0?q=-13.163225249955481, -72.54577669455493(MachuPicchu)")
-        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-        mapIntent.setPackage("com.google.android.apps.maps")
-        startActivity(mapIntent)
         System.exit(0)
     }
 
