@@ -27,5 +27,11 @@ class Login : AppCompatActivity() {
             startActivity(pantalla1)
             System.exit(0)
         }
+
+        ingresar.setOnClickListener {
+            val pantalla2 = Intent(this, Menu::class.java)
+            startActivity(pantalla2)
+            System.exit(0)
+        }
     }
 }

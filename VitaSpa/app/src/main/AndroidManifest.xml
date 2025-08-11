@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VitaSpa">
         <activity
+            android:name=".Mapa"
+            android:exported="true" />
+        <activity
+            android:name=".Vision"
+            android:exported="true" />
+        <activity
+            android:name=".Mision"
+            android:exported="true" />
+        <activity
+            android:name=".Nosotros"
+            android:exported="true" />
+        <activity
+            android:name=".Servicios"
+            android:exported="true" />
+        <activity
+            android:name=".Menu"
+            android:exported="true" />
+        <activity
             android:name=".Login"
             android:exported="true" />
         <activity
