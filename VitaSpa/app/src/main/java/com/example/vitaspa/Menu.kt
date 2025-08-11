@@ -19,27 +19,8 @@ class Menu : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    // este metodo evalua que accion va tomar cuando se selecciona un item del menu opciones y esto lo hace mediante el ID del elemento seleccionado
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.home -> home()
-            R.id.nosotros -> nosotros()
-            R.id.mapa -> mapa()
-            R.id.servicios -> servicios()
-            R.id.mision -> mision()
-            R.id.vision -> vision()
-            //R.id.logout -> logout()
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
     // estas funciones nos permiten navegar de la pantalla actual hacia los diferentes pantallas de la aplicacion
-    fun home() {
-        val pantalla1 = Intent(this, Menu::class.java)
-        startActivity(pantalla1)
-        System.exit(0)
-    }
+
     fun nosotros() {
         val pantalla2 = Intent(this, Nosotros::class.java)
         startActivity(pantalla2)
@@ -75,5 +56,19 @@ class Menu : AppCompatActivity() {
 //        startActivity(pantalla7)
 //        System.exit(0)
 //    }
+
+    // este metodo evalua que accion va tomar cuando se selecciona un item del menu opciones y esto lo hace mediante el ID del elemento seleccionado
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nosotros -> nosotros()
+            R.id.mapa -> mapa()
+            R.id.servicios -> servicios()
+            R.id.mision -> mision()
+            R.id.vision -> vision()
+            //R.id.logout -> logout()
+
+        }
+        return super.onOptionsItemSelected(item)
+    }
 
 }
