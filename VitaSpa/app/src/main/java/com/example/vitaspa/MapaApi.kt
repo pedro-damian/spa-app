@@ -43,11 +43,11 @@ class MapaApi : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE)
+        mMap.setMapType(GoogleMap.MAP_TYPE_TERRAIN)
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(-34.0, 151.0)
-        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 20f))
+        val vitaspa = LatLng(-12.05211808310037, -76.9653540010701)
+        mMap.addMarker(MarkerOptions().position(vitaspa).title("Vita Spa"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(vitaspa, 15f))
         mMap.uiSettings.isZoomControlsEnabled = true
     }
 
@@ -61,35 +61,36 @@ class MapaApi : AppCompatActivity(), OnMapReadyCallback {
     fun home() {
         val pantalla1 = Intent(this, Menu::class.java)
         startActivity(pantalla1)
-        System.exit(0)
+        finish()
     }
     fun nosotros() {
         val pantalla2 = Intent(this, Nosotros::class.java)
         startActivity(pantalla2)
-        System.exit(0)
+        finish()
     }
 
     fun servicios() {
         val pantalla4 = Intent(this, Servicios::class.java)
         startActivity(pantalla4)
-        System.exit(0)
+        finish()
     }
     fun mision() {
         val pantalla5 = Intent(this, Mision::class.java)
         startActivity(pantalla5)
-        System.exit(0)
+        finish()
     }
 
     fun vision() {
         val pantalla6 = Intent(this, Vision::class.java)
         startActivity(pantalla6)
-        System.exit(0)
+        finish()
     }
-//    fun logout() {
-//        val pantalla7 = Intent(this, PagoConsumo::class.java)
-//        startActivity(pantalla7)
-//        System.exit(0)
-//    }
+    fun logout() {
+        val pantalla7 = Intent(this, Login::class.java)
+        pantalla7.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK // Limpia el stack de actividades
+        startActivity(pantalla7)
+        finish()
+    }
 
     // este metodo evalua que accion va tomar cuando se selecciona un item del menu opciones y esto lo hace mediante el ID del elemento seleccionado
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -99,7 +100,7 @@ class MapaApi : AppCompatActivity(), OnMapReadyCallback {
             R.id.mision -> mision()
             R.id.servicios -> servicios()
             R.id.vision -> vision()
-            //R.id.logout -> logout()
+            R.id.logout -> logout()
 
         }
         return super.onOptionsItemSelected(item)

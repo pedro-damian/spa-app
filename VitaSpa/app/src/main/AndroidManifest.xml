@@ -8,6 +8,8 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -32,24 +34,29 @@
         <activity
             android:name=".MapaApi"
             android:exported="true"
-            android:label="@string/title_activity_mapa_api" />
-        <activity
-            android:name=".Mapa"
-            android:exported="true" />
+            android:label="Ubicacion" />
+<!--        <activity-->
+<!--            android:name=".Mapa"-->
+<!--            android:exported="true" />-->
         <activity
             android:name=".Vision"
+            android:label="Vision"
             android:exported="true" />
         <activity
             android:name=".Mision"
+            android:label="Mision"
             android:exported="true" />
         <activity
             android:name=".Nosotros"
+            android:label="Nosotros"
             android:exported="true" />
         <activity
             android:name=".Servicios"
+            android:label="Servicios"
             android:exported="true" />
         <activity
             android:name=".Menu"
+            android:label="Menu"
             android:exported="true" />
         <activity
             android:name=".Login"
