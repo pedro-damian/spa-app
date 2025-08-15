@@ -19,7 +19,7 @@
         android:id="@+id/tvLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
+        android:text="Login de Acceso"
         android:textSize="22sp"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -69,17 +69,18 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/clave"
             android:layout_marginTop="25dp"
-            android:text="Ingresar"
             android:backgroundTint="#34DC7C"
-            />
+            android:text="Ingresar"
+            app:cornerRadius="50dp" />
 
         <Button
-            android:id="@+id/btnRegresar"
+            android:id="@+id/btnCerrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btnIngresar"
             android:backgroundTint="#B474E5"
-            android:text="Regresar" />
+            android:text="Salir"
+            app:cornerRadius="50dp" />
 
 
 

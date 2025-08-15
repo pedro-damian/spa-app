@@ -1,5 +1,6 @@
 package com.example.vitaspa
 
+import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +17,8 @@ class Login : AppCompatActivity() {
     lateinit var usuario: EditText
     lateinit var clave: EditText
     lateinit var ingresar:Button
-    lateinit var regresar:Button
+    lateinit var cerrar:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -24,19 +26,24 @@ class Login : AppCompatActivity() {
         usuario = findViewById(R.id.etUsuario)
         clave = findViewById(R.id.etClave)
         ingresar = findViewById(R.id.btnIngresar)
-        regresar = findViewById(R.id.btnRegresar)
+        cerrar = findViewById(R.id.btnCerrar)
 
 
-        regresar.setOnClickListener {
-            val pantalla1 = Intent(this, MainActivity::class.java)
-            startActivity(pantalla1)
-            finish()
+        cerrar.setOnClickListener {
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            builder
+                .setMessage("Fin de la aplicacion")
+                .setTitle("Cerrar aplicacion")
+                .setPositiveButton(android.R.string.yes){dialog, which -> Toast.makeText(applicationContext, android.R.string.yes, Toast.LENGTH_SHORT).show()
+                    System.exit(0) }
+                .setNegativeButton(android.R.string.no){dialog, which -> Toast.makeText(applicationContext, "Cancelado", Toast.LENGTH_SHORT).show()}
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
         }
 
+
         ingresar.setOnClickListener {
-//            val pantalla2 = Intent(this, Menu::class.java)
-//            startActivity(pantalla2)
-//            System.exit(0)
+
             val username = usuario.text.toString().trim()
             val password = clave.text.toString().trim()
 
@@ -50,7 +57,7 @@ class Login : AppCompatActivity() {
     }
 
     private fun login(username: String, password: String) {
-        val url = "http://192.168.1.9/webapi/v1/index.php?op=login"  //  IP local
+        val url = EndPoints.LOGIN
 
         val queue = Volley.newRequestQueue(this)
         val stringRequest = object : StringRequest(
@@ -60,9 +67,9 @@ class Login : AppCompatActivity() {
                 if (!jsonObject.getBoolean("error")) {
                     Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show()
                     // Redirigir a la pantalla de menú
-                    val intent = Intent(this, Menu::class.java)  // Ajusta al nombre de tu activity de menú
+                    val intent = Intent(this, Menu::class.java)
                     startActivity(intent)
-                    finish()  // Opcional: cierra el login
+                    finish()  // cierra la actividad del login
                 } else {
                     Toast.makeText(this, jsonObject.getString("message"), Toast.LENGTH_SHORT).show()
                 }
